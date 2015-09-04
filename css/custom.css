@@ -117,6 +117,10 @@ a.text-primary:focus { color: #052746; }
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
     
+    h2.section-heading {
+        font-size: 50px!important;
+    }
+    
     .intro-message {
         padding-top: 18%;
         padding-bottom: 0%;
