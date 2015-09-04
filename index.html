@@ -31,23 +31,23 @@
     <![endif]-->
 
     <!-- SMOOTH SCROLL -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script>
-    $(function() {
-      $('a[href*=#]:not([href=#])').click(function() {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-          if (target.length) {
-            $('html,body').animate({
-              scrollTop: target.offset().top
-            }, 300);
-            return false;
-          }
-        }
-      });
-    });
-    </script>   
+    // <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    // <script>
+    // $(function() {
+    //   $('a[href*=#]:not([href=#])').click(function() {
+    //     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+    //       var target = $(this.hash);
+    //       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+    //       if (target.length) {
+    //         $('html,body').animate({
+    //           scrollTop: target.offset().top
+    //         }, 300);
+    //         return false;
+    //       }
+    //     }
+    //   });
+    // });
+    // </script>   
 
 </head>
 
@@ -85,7 +85,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#showroom">Our Showroom</a></li> 
                     <li><a href="#location">Location</a></li>                    
-                    <li><a href="">(555) 555-5555</a></li>
+                    <li><a href="">(713) 861-2343</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -108,7 +108,7 @@
                                 <a href="#showroom" class="btn btn-default btn-lg"><i class="fa fa-home fa-fw"></i> <span class="network-name"> View Our Showroom</span></a>
                             </li>
                             <li>
-                                <a href="" class="btn btn-warning btn-lg"><i class="fa fa-phone fa-fw"></i> <span class="network-name"> Call (555) 555-5555</span></a>
+                                <a href="" class="btn btn-warning btn-lg"><i class="fa fa-phone fa-fw"></i> <span class="network-name"> (713) 861-2343</span></a>
                             </li>  
                             <br>
                             <a href="#showroom"><span class="fa fa-angle-down big-arrow"></span></a>
@@ -136,41 +136,729 @@
                     <br>
                 </div>
             </div>
+
             <div class="row">
-                <div class="col-sm-4">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <img class="img-responsive" src="img/electrolux1.jpg" alt="">
-                        </div>
-                        <div class="panel-body">
-                            <h3 class="">Electrolux Side-by-Side Refridgerator</h3>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lectus eros, luctus et enim vitae, placerat suscipit leo. Sed molestie accumsan porttitor. Duis viverra feugiat faucibus. Morbi fringilla diam nec varius gravida. Nullam vel quam vel orci rhoncus suscipit. Curabitur rhoncus tristique finibus. 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <img class="img-responsive" src="img/frigidaire1.jpg" alt="">
-                        </div>
-                        <div class="panel-body">
-                            <h3 class="">Frigidaire Front-Load Washer/Dryer</h3>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lectus eros, luctus et enim vitae, placerat suscipit leo. Sed molestie accumsan porttitor. Duis viverra feugiat faucibus. Morbi fringilla diam nec varius gravida. Nullam vel quam vel orci rhoncus suscipit. Curabitur rhoncus tristique finibus. 
-                        </div>
-                    </div>
-                </div>                
-                <div class="col-sm-4">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <img class="img-responsive" src="img/electrolux2.jpg" alt="">
-                        </div>
-                        <div class="panel-body">
-                            <h3 class="">Electrolux Built-In Dishwasher</h3>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lectus eros, luctus et enim vitae, placerat suscipit leo. Sed molestie accumsan porttitor. Duis viverra feugiat faucibus. Morbi fringilla diam nec varius gravida. Nullam vel quam vel orci rhoncus suscipit. Curabitur rhoncus tristique finibus. 
-                        </div>
-                    </div>
-                </div>                                                            
-            </div>
+
+                <!-- Tab Nav --> 
+                <aside class="showroom-nav col-sm-2">                                 
+                    <ul class="nav nav-pills nav-stacked" role="tablist">
+                        <li role="presentation" class="active"><a href="#cat1" aria-controls="cat1" role="tab" data-toggle="tab">Refrigerators</a></li>
+                        <li role="presentation"><a href="#cat2" aria-controls="cat2" role="tab" data-toggle="tab">Cooktops</a></li>
+                        <li role="presentation"><a href="#cat3" aria-controls="cat3" role="tab" data-toggle="tab">Wall Ovens</a></li>
+                        <li role="presentation"><a href="#cat4" aria-controls="cat4" role="tab" data-toggle="tab">Ranges / Stoves</a></li>
+                        <li role="presentation"><a href="#cat5" aria-controls="cat5" role="tab" data-toggle="tab">Ventilation</a></li>
+                        <li role="presentation"><a href="#cat6" aria-controls="cat6" role="tab" data-toggle="tab">Microwaves</a></li>
+                        <li role="presentation"><a href="#cat7" aria-controls="cat7" role="tab" data-toggle="tab">Dishwashers</a></li>
+                        <li role="presentation"><a href="#cat8" aria-controls="cat8" role="tab" data-toggle="tab">Washers / Dryers</a></li>                    
+                    </ul>                
+                </aside>
+                
+                <!-- Product Content for every category -->
+                <section class="showroom-main col-sm-10">
+                    <div class="row tab-content">                        
+                        
+                        <!-- Category Title -->
+                        <div role="tabpanel" class="tab-pane active" id="cat1">
+                            <div class="col-sm-6 col-md-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <img class="" src="img/products/refrigerator-EI26SS30JS.png" alt="">
+                                    </div>
+                                    <div class="panel-body">
+                                        <h3 class="">
+                                            Electrolux Standard-Depth Side-By-Side Refrigerator with IQ-Touch™ Controls
+                                        </h3>
+                                        <p>
+                                            <li>Luxury-Glide Chill ZoneTM Drawer</li>
+                                            <li>Luxury-Glide® Dual Humidity-Controlled Crisper Drawer</li>
+                                            <li>Sliding SpillSafe® Glass Shelves</li>
+                                            <li>Platinum Star® Limited Warranty</li> 
+                                        </p>
+                                        <h4>Call for Pricing</h4>  
+                                        <a class="btn btn-primary btn-block"><i class="fa fa-phone fa-fw"></i> 
+                                            (713) 861-2343
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <img class="" src="img/products/refrigerator-EI23BC65KS.png" alt="">
+                                    </div>
+                                    <div class="panel-body">
+                                        <h3 class="">
+                                            Electrolux Counter-Depth French Door Refrigerator with IQ-Touch™ Controls
+                                        </h3>
+                                        <p>
+                                            <li>Luxury-Glide® Cool ZoneTM Drawer</li>
+                                            <li>Luxury-Glide® Humidity-Controlled Crisper Drawers</li>
+                                            <li>IQ-TouchTM Controls</li>
+                                            <li>New Luxury-Design® Glass Shelves</li>   
+                                        </p>
+                                        <h4>Call for Pricing</h4>  
+                                        <a class="btn btn-primary btn-block"><i class="fa fa-phone fa-fw"></i> 
+                                            (713) 861-2343
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>                
+                            <div class="col-sm-6 col-md-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <img class="" src="img/products/refrigerator-EI23BC30KS.png" alt="">
+                                    </div>
+                                    <div class="panel-body">
+                                        <h3 class="">
+                                            Electrolux Counter-Depth French Door Refrigerator with IQ-Touch™ Controls
+                                        </h3>
+                                        <p>
+                                            <li>Luxury-Glide® Cool ZoneTM Drawer</li>
+                                            <li>Luxury-Glide® Humidity-Controlled Crisper Drawers</li>
+                                            <li>Sliding SpillSafe® Glass Shelves</li>
+                                            <li>Luxury-Design® Lighting</li>            
+                                        </p>
+                                        <h4>Call for Pricing</h4>  
+                                        <a class="btn btn-primary btn-block"><i class="fa fa-phone fa-fw"></i> 
+                                            (713) 861-2343
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>  
+                            <div class="col-sm-6 col-md-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <img class="" src="img/products/refrigerator-FGHI1864QF.png" alt="">
+                                    </div>
+                                    <div class="panel-body">
+                                        <h3 class="">
+                                            Frigidaire Gallery Custom-Flex™ 18.3 Cu. Ft. Top Freezer Refrigerator
+                                        </h3>
+                                        <p>
+                                            <li>Over 100 Ways to Organize</li>
+                                            <li>Custom-Flex Door™</li>
+                                            <li>Store-More™ Drawer</li>
+                                            <li>Smudge-Proof™ Stainless Steel</li>
+                                            <li>Bright LED Lighting</li>
+                                        </p>
+                                        <h4>Call for Pricing</h4>  
+                                        <a class="btn btn-primary btn-block"><i class="fa fa-phone fa-fw"></i> 
+                                            (713) 861-2343
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>      
+                            <div class="col-sm-6 col-md-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <img class="" src="img/products/refrigerator-FFSC2323LE.png" alt="">
+                                    </div>
+                                    <div class="panel-body">
+                                        <h3 class="">
+                                            Frigidaire 22.2 Cu. Ft. Counter-Depth Side-by-Side Refrigerator
+                                        </h3>
+                                        <p>
+                                            <li>Adjustable Interior Storage</li>
+                                            <li>Counter Depth Design</li>
+                                            <li>Sliding Spillsafe™ Glass Shelves</li>
+                                            <li>Puresource™ Ultra Water Filtration</li>
+                                            <li>Control Lock Option</li>                                            
+                                        </p>
+                                        <h4>Call for Pricing</h4>  
+                                        <a class="btn btn-primary btn-block"><i class="fa fa-phone fa-fw"></i> 
+                                            (713) 861-2343
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>          
+                            <div class="col-sm-6 col-md-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <img class="" src="img/products/refrigerator-FFSC2323LP.png" alt="">
+                                    </div>
+                                    <div class="panel-body">
+                                        <h3 class="">
+                                            Frigidaire 22.2 Cu. Ft. Counter-Depth Side-by-Side Refrigerator
+                                        </h3>
+                                        <p>
+                                            <li>Adjustable Interior Storage</li>
+                                            <li>Counter Depth Design</li>
+                                            <li>Sliding Spillsafe™ Glass Shelves</li>
+                                            <li>Puresource™ Ultra Water Filtration</li>
+                                            <li>Control Lock Option</li>                                            
+                                        </p>
+                                        <h4>Call for Pricing</h4>  
+                                        <a class="btn btn-primary btn-block"><i class="fa fa-phone fa-fw"></i> 
+                                            (713) 861-2343
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>                                                        
+                        </div> <!-- .tab-pane -->
+            
+                        <!-- Category Title -->
+                        <div role="tabpanel" class="tab-pane fade" id="cat2">
+                            <div class="col-sm-6 col-md-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <img class="" src="img/electrolux1.jpg" alt="">
+                                    </div>
+                                    <div class="panel-body">
+                                        <h3 class="">
+                                            Category 2
+                                        </h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lectus eros, luctus et enim vitae, placerat suscipit leo. Sed molestie accumsan porttitor.
+                                        </p>
+                                        <h4>Call for Pricing</h4>  
+                                        <a class="btn btn-primary btn-block"><i class="fa fa-phone fa-fw"></i> 
+                                            (713) 861-2343
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <img class="" src="img/electrolux1.jpg" alt="">
+                                    </div>
+                                    <div class="panel-body">
+                                        <h3 class="">
+                                            Title
+                                        </h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lectus eros, luctus et enim vitae, placerat suscipit leo. Sed molestie accumsan porttitor.
+                                        </p>
+                                        <h4>Call for Pricing</h4>  
+                                        <a class="btn btn-primary btn-block"><i class="fa fa-phone fa-fw"></i> 
+                                            (713) 861-2343
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>                
+                            <div class="col-sm-6 col-md-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <img class="" src="img/electrolux1.jpg" alt="">
+                                    </div>
+                                    <div class="panel-body">
+                                        <h3 class="">
+                                            Title
+                                        </h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lectus eros, luctus et enim vitae, placerat suscipit leo. Sed molestie accumsan porttitor.
+                                        </p>
+                                        <h4>Call for Pricing</h4>  
+                                        <a class="btn btn-primary btn-block"><i class="fa fa-phone fa-fw"></i> 
+                                            (713) 861-2343
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>  
+                            <div class="col-sm-6 col-md-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <img class="" src="img/electrolux1.jpg" alt="">
+                                    </div>
+                                    <div class="panel-body">
+                                        <h3 class="">
+                                            Title
+                                        </h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lectus eros, luctus et enim vitae, placerat suscipit leo. Sed molestie accumsan porttitor.
+                                        </p>
+                                        <h4>Call for Pricing</h4>  
+                                        <a class="btn btn-primary btn-block"><i class="fa fa-phone fa-fw"></i> 
+                                            (713) 861-2343
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>      
+                        </div> <!-- .tab-pane -->
+
+                        <!-- Category Title -->
+                        <div role="tabpanel" class="tab-pane fade" id="cat3">
+                            <div class="col-sm-6 col-md-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <img class="" src="img/electrolux1.jpg" alt="">
+                                    </div>
+                                    <div class="panel-body">
+                                        <h3 class="">
+                                            Category 3
+                                        </h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lectus eros, luctus et enim vitae, placerat suscipit leo. Sed molestie accumsan porttitor.
+                                        </p>
+                                        <h4>Call for Pricing</h4>  
+                                        <a class="btn btn-primary btn-block"><i class="fa fa-phone fa-fw"></i> 
+                                            (713) 861-2343
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <img class="" src="img/electrolux1.jpg" alt="">
+                                    </div>
+                                    <div class="panel-body">
+                                        <h3 class="">
+                                            Title
+                                        </h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lectus eros, luctus et enim vitae, placerat suscipit leo. Sed molestie accumsan porttitor.
+                                        </p>
+                                        <h4>Call for Pricing</h4>  
+                                        <a class="btn btn-primary btn-block"><i class="fa fa-phone fa-fw"></i> 
+                                            (713) 861-2343
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>                
+                            <div class="col-sm-6 col-md-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <img class="" src="img/electrolux1.jpg" alt="">
+                                    </div>
+                                    <div class="panel-body">
+                                        <h3 class="">
+                                            Title
+                                        </h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lectus eros, luctus et enim vitae, placerat suscipit leo. Sed molestie accumsan porttitor.
+                                        </p>
+                                        <h4>Call for Pricing</h4>  
+                                        <a class="btn btn-primary btn-block"><i class="fa fa-phone fa-fw"></i> 
+                                            (713) 861-2343
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>  
+                            <div class="col-sm-6 col-md-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <img class="" src="img/electrolux1.jpg" alt="">
+                                    </div>
+                                    <div class="panel-body">
+                                        <h3 class="">
+                                            Title
+                                        </h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lectus eros, luctus et enim vitae, placerat suscipit leo. Sed molestie accumsan porttitor.
+                                        </p>
+                                        <h4>Call for Pricing</h4>  
+                                        <a class="btn btn-primary btn-block"><i class="fa fa-phone fa-fw"></i> 
+                                            (713) 861-2343
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>      
+                        </div> <!-- .tab-pane -->
+
+                        <!-- Category Title -->
+                        <div role="tabpanel" class="tab-pane fade" id="cat4">
+                            <div class="col-sm-6 col-md-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <img class="" src="img/electrolux1.jpg" alt="">
+                                    </div>
+                                    <div class="panel-body">
+                                        <h3 class="">
+                                            Category 4
+                                        </h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lectus eros, luctus et enim vitae, placerat suscipit leo. Sed molestie accumsan porttitor.
+                                        </p>
+                                        <h4>Call for Pricing</h4>  
+                                        <a class="btn btn-primary btn-block"><i class="fa fa-phone fa-fw"></i> 
+                                            (713) 861-2343
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <img class="" src="img/electrolux1.jpg" alt="">
+                                    </div>
+                                    <div class="panel-body">
+                                        <h3 class="">
+                                            Title
+                                        </h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lectus eros, luctus et enim vitae, placerat suscipit leo. Sed molestie accumsan porttitor.
+                                        </p>
+                                        <h4>Call for Pricing</h4>  
+                                        <a class="btn btn-primary btn-block"><i class="fa fa-phone fa-fw"></i> 
+                                            (713) 861-2343
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>                
+                            <div class="col-sm-6 col-md-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <img class="" src="img/electrolux1.jpg" alt="">
+                                    </div>
+                                    <div class="panel-body">
+                                        <h3 class="">
+                                            Title
+                                        </h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lectus eros, luctus et enim vitae, placerat suscipit leo. Sed molestie accumsan porttitor.
+                                        </p>
+                                        <h4>Call for Pricing</h4>  
+                                        <a class="btn btn-primary btn-block"><i class="fa fa-phone fa-fw"></i> 
+                                            (713) 861-2343
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>  
+                            <div class="col-sm-6 col-md-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <img class="" src="img/electrolux1.jpg" alt="">
+                                    </div>
+                                    <div class="panel-body">
+                                        <h3 class="">
+                                            Title
+                                        </h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lectus eros, luctus et enim vitae, placerat suscipit leo. Sed molestie accumsan porttitor.
+                                        </p>
+                                        <h4>Call for Pricing</h4>  
+                                        <a class="btn btn-primary btn-block"><i class="fa fa-phone fa-fw"></i> 
+                                            (713) 861-2343
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>      
+                        </div> <!-- .tab-pane --> 
+
+                        <!-- Category Title -->
+                        <div role="tabpanel" class="tab-pane fade" id="cat5">
+                            <div class="col-sm-6 col-md-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <img class="" src="img/electrolux1.jpg" alt="">
+                                    </div>
+                                    <div class="panel-body">
+                                        <h3 class="">
+                                            Category 5
+                                        </h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lectus eros, luctus et enim vitae, placerat suscipit leo. Sed molestie accumsan porttitor.
+                                        </p>
+                                        <h4>Call for Pricing</h4>  
+                                        <a class="btn btn-primary btn-block"><i class="fa fa-phone fa-fw"></i> 
+                                            (713) 861-2343
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <img class="" src="img/electrolux1.jpg" alt="">
+                                    </div>
+                                    <div class="panel-body">
+                                        <h3 class="">
+                                            Title
+                                        </h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lectus eros, luctus et enim vitae, placerat suscipit leo. Sed molestie accumsan porttitor.
+                                        </p>
+                                        <h4>Call for Pricing</h4>  
+                                        <a class="btn btn-primary btn-block"><i class="fa fa-phone fa-fw"></i> 
+                                            (713) 861-2343
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>                
+                            <div class="col-sm-6 col-md-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <img class="" src="img/electrolux1.jpg" alt="">
+                                    </div>
+                                    <div class="panel-body">
+                                        <h3 class="">
+                                            Title
+                                        </h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lectus eros, luctus et enim vitae, placerat suscipit leo. Sed molestie accumsan porttitor.
+                                        </p>
+                                        <h4>Call for Pricing</h4>  
+                                        <a class="btn btn-primary btn-block"><i class="fa fa-phone fa-fw"></i> 
+                                            (713) 861-2343
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>  
+                            <div class="col-sm-6 col-md-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <img class="" src="img/electrolux1.jpg" alt="">
+                                    </div>
+                                    <div class="panel-body">
+                                        <h3 class="">
+                                            Title
+                                        </h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lectus eros, luctus et enim vitae, placerat suscipit leo. Sed molestie accumsan porttitor.
+                                        </p>
+                                        <h4>Call for Pricing</h4>  
+                                        <a class="btn btn-primary btn-block"><i class="fa fa-phone fa-fw"></i> 
+                                            (713) 861-2343
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>      
+                        </div> <!-- .tab-pane -->
+            
+                        <!-- Category Title -->
+                        <div role="tabpanel" class="tab-pane fade" id="cat6">
+                            <div class="col-sm-6 col-md-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <img class="" src="img/electrolux1.jpg" alt="">
+                                    </div>
+                                    <div class="panel-body">
+                                        <h3 class="">
+                                            Category 6
+                                        </h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lectus eros, luctus et enim vitae, placerat suscipit leo. Sed molestie accumsan porttitor.
+                                        </p>
+                                        <h4>Call for Pricing</h4>  
+                                        <a class="btn btn-primary btn-block"><i class="fa fa-phone fa-fw"></i> 
+                                            (713) 861-2343
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <img class="" src="img/electrolux1.jpg" alt="">
+                                    </div>
+                                    <div class="panel-body">
+                                        <h3 class="">
+                                            Title
+                                        </h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lectus eros, luctus et enim vitae, placerat suscipit leo. Sed molestie accumsan porttitor.
+                                        </p>
+                                        <h4>Call for Pricing</h4>  
+                                        <a class="btn btn-primary btn-block"><i class="fa fa-phone fa-fw"></i> 
+                                            (713) 861-2343
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>                
+                            <div class="col-sm-6 col-md-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <img class="" src="img/electrolux1.jpg" alt="">
+                                    </div>
+                                    <div class="panel-body">
+                                        <h3 class="">
+                                            Title
+                                        </h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lectus eros, luctus et enim vitae, placerat suscipit leo. Sed molestie accumsan porttitor.
+                                        </p>
+                                        <h4>Call for Pricing</h4>  
+                                        <a class="btn btn-primary btn-block"><i class="fa fa-phone fa-fw"></i> 
+                                            (713) 861-2343
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>  
+                            <div class="col-sm-6 col-md-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <img class="" src="img/electrolux1.jpg" alt="">
+                                    </div>
+                                    <div class="panel-body">
+                                        <h3 class="">
+                                            Title
+                                        </h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lectus eros, luctus et enim vitae, placerat suscipit leo. Sed molestie accumsan porttitor.
+                                        </p>
+                                        <h4>Call for Pricing</h4>  
+                                        <a class="btn btn-primary btn-block"><i class="fa fa-phone fa-fw"></i> 
+                                            (713) 861-2343
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>      
+                        </div> <!-- .tab-pane -->
+
+                        <!-- Category Title -->
+                        <div role="tabpanel" class="tab-pane fade" id="cat7">
+                            <div class="col-sm-6 col-md-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <img class="" src="img/electrolux1.jpg" alt="">
+                                    </div>
+                                    <div class="panel-body">
+                                        <h3 class="">
+                                            Category 7
+                                        </h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lectus eros, luctus et enim vitae, placerat suscipit leo. Sed molestie accumsan porttitor.
+                                        </p>
+                                        <h4>Call for Pricing</h4>  
+                                        <a class="btn btn-primary btn-block"><i class="fa fa-phone fa-fw"></i> 
+                                            (713) 861-2343
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <img class="" src="img/electrolux1.jpg" alt="">
+                                    </div>
+                                    <div class="panel-body">
+                                        <h3 class="">
+                                            Title
+                                        </h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lectus eros, luctus et enim vitae, placerat suscipit leo. Sed molestie accumsan porttitor.
+                                        </p>
+                                        <h4>Call for Pricing</h4>  
+                                        <a class="btn btn-primary btn-block"><i class="fa fa-phone fa-fw"></i> 
+                                            (713) 861-2343
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>                
+                            <div class="col-sm-6 col-md-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <img class="" src="img/electrolux1.jpg" alt="">
+                                    </div>
+                                    <div class="panel-body">
+                                        <h3 class="">
+                                            Title
+                                        </h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lectus eros, luctus et enim vitae, placerat suscipit leo. Sed molestie accumsan porttitor.
+                                        </p>
+                                        <h4>Call for Pricing</h4>  
+                                        <a class="btn btn-primary btn-block"><i class="fa fa-phone fa-fw"></i> 
+                                            (713) 861-2343
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>  
+                            <div class="col-sm-6 col-md-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <img class="" src="img/electrolux1.jpg" alt="">
+                                    </div>
+                                    <div class="panel-body">
+                                        <h3 class="">
+                                            Title
+                                        </h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lectus eros, luctus et enim vitae, placerat suscipit leo. Sed molestie accumsan porttitor.
+                                        </p>
+                                        <h4>Call for Pricing</h4>  
+                                        <a class="btn btn-primary btn-block"><i class="fa fa-phone fa-fw"></i> 
+                                            (713) 861-2343
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>      
+                        </div> <!-- .tab-pane -->
+
+                        <!-- Category Title -->
+                        <div role="tabpanel" class="tab-pane fade" id="cat8">
+                            <div class="col-sm-6 col-md-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <img class="" src="img/electrolux1.jpg" alt="">
+                                    </div>
+                                    <div class="panel-body">
+                                        <h3 class="">
+                                            Category 8
+                                        </h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lectus eros, luctus et enim vitae, placerat suscipit leo. Sed molestie accumsan porttitor.
+                                        </p>
+                                        <h4>Call for Pricing</h4>  
+                                        <a class="btn btn-primary btn-block"><i class="fa fa-phone fa-fw"></i> 
+                                            (713) 861-2343
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <img class="" src="img/electrolux1.jpg" alt="">
+                                    </div>
+                                    <div class="panel-body">
+                                        <h3 class="">
+                                            Title
+                                        </h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lectus eros, luctus et enim vitae, placerat suscipit leo. Sed molestie accumsan porttitor.
+                                        </p>
+                                        <h4>Call for Pricing</h4>  
+                                        <a class="btn btn-primary btn-block"><i class="fa fa-phone fa-fw"></i> 
+                                            (713) 861-2343
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>                
+                            <div class="col-sm-6 col-md-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <img class="" src="img/electrolux1.jpg" alt="">
+                                    </div>
+                                    <div class="panel-body">
+                                        <h3 class="">
+                                            Title
+                                        </h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lectus eros, luctus et enim vitae, placerat suscipit leo. Sed molestie accumsan porttitor.
+                                        </p>
+                                        <h4>Call for Pricing</h4>  
+                                        <a class="btn btn-primary btn-block"><i class="fa fa-phone fa-fw"></i> 
+                                            (713) 861-2343
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>  
+                            <div class="col-sm-6 col-md-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <img class="" src="img/electrolux1.jpg" alt="">
+                                    </div>
+                                    <div class="panel-body">
+                                        <h3 class="">
+                                            Title
+                                        </h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lectus eros, luctus et enim vitae, placerat suscipit leo. Sed molestie accumsan porttitor.
+                                        </p>
+                                        <h4>Call for Pricing</h4>  
+                                        <a class="btn btn-primary btn-block"><i class="fa fa-phone fa-fw"></i> 
+                                            (713) 861-2343
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>      
+                        </div> <!-- .tab-pane -->                                                                                
+
+                    </div> <!-- .tab-content -->                
+                </section> <!-- .col -->
+            </div> <!-- .row -->
         </div><!-- /.container -->
     </div><!-- /.content-section-b -->
 
@@ -187,7 +875,7 @@
                 <div class="col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-0">
                     <img class="img-responsive" src="img/morrison-logo.png" alt="">
                     <p>
-                        <a href="" class="btn btn-primary"><span class="network-name">(555) 555-5555</span></a>
+                        <a href="" class="btn btn-primary"><span class="network-name">(713) 861-2343</span></a>
                         <a href="https://goo.gl/maps/GnFgV" target="_blank" class="btn btn-primary"><span class="network-name">Get Directions</span></a>
                     </p>
                     <p>                       
@@ -253,7 +941,7 @@
                             <a href="https://goo.gl/maps/aNqdg" target="_blank" class="btn btn-warning btn-lg"><i class="fa fa-map-marker fa-fw"></i> <span class="network-name">Map / Directions</span></a>
                         </li>                         
                         <li>
-                            <a href="" class="btn btn-default btn-lg"><i class="fa fa-phone fa-fw"></i> <span class="network-name">(555) 555-5555</span></a>
+                            <a href="" class="btn btn-default btn-lg"><i class="fa fa-phone fa-fw"></i> <span class="network-name">(713) 861-2343</span></a>
                         </li>                        
                         <li>
                             <a href="https://twitter.com/morrisonsupply" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
@@ -284,7 +972,7 @@
                         <li><a href="#location">Location</a></li>
                     </ul>
                     <p class="primary-info text-muted">
-                        (555) 555-5555
+                        (713) 861-2343
                         <span class="info-divider">|</span>
                         6867 Wynnwood Ln, Houston, TX 77008
                     </p>
@@ -294,11 +982,10 @@
         </div>
     </footer>
 
-    <!-- jQuery -->
+    <!-- js -->
     <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
 
 </body>
 

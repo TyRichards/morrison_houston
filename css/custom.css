@@ -5,8 +5,10 @@ body { background-color: #353535; font-weight: 400; }
 h1, h2, h3, h4, h5, h6 {
     font-weight: 100;
     text-transform: uppercase;
-    color: #2E6CAB;
+    color: #063968;
 }
+
+a { color: #063968; }
 
 a:hover { text-decoration: none; }
 
@@ -20,6 +22,7 @@ a.text-primary:focus { color: #052746; }
 .section p { margin-top: 30px; }
 
 .content-section-b { background-color: #ffffff; }
+.content-section-a { background-color: #C5C5CA; }
 
 
 /****************************** Navbar *****************************/
@@ -35,6 +38,8 @@ a.text-primary:focus { color: #052746; }
     max-height: 50px;
     margin-top: -11px;
 }
+
+.navbar-default .nav li a { color: #063968; }
 
 .nav li a {
     text-transform: uppercase;
@@ -73,11 +78,31 @@ a.text-primary:focus { color: #052746; }
 
 /*** Products **/
 
-.panel-body { padding: 25px; }
+.panel-default > .panel-heading {
+    background-color: #ffffff;
+    text-align: center;
+}
 
-.panel-body h3 { margin-top: 0px; margin-bottom: 19px; }
+.panel-heading { padding: 25px 0; }
+.panel-heading img { max-width: 100%; }
 
-.panel-heading { padding: 0; }
+.panel-body { padding: 25px; background-color: #eee; }
+.panel-body h3 { margin-top: 0px; margin-bottom: 19px; text-transform: none; font-size: 18px; font-weight: 400; }
+.panel-body h4 {
+    font-weight: 400;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 24px;
+    letter-spacing: 2px;
+}
+.panel-body .btn { margin-top: 5px; text-transform: uppercase; }
+.panel-body p { margin-top: 0; }
+
+.showroom-nav { margin-bottom: 40px; }
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    background-color: #063968;
+}
 
 /******************** Footer *********************/
 
