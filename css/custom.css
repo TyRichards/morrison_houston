@@ -78,6 +78,10 @@ a.text-primary:focus { color: #052746; }
 
 /*** Products **/
 
+.category-cta {
+    text-transform: none;
+}
+
 .panel-default > .panel-heading {
     background-color: #ffffff;
     text-align: center;
