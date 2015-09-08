@@ -178,7 +178,7 @@ a.text-primary:focus { color: #052746; }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
-
+    .showroom-nav .nav-pills li a { text-align: center; }
 }
 
 /* Extra Small Devices, Phones */ 
