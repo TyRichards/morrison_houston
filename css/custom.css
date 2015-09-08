@@ -87,7 +87,7 @@ a.text-primary:focus { color: #052746; }
     text-align: center;
 }
 
-.panel-heading { padding: 0 0; }
+.panel-heading { padding: 25px 0; }
 .panel-heading img { max-width: 100%; }
 
 .panel-body { padding: 25px; background-color: #eee; }
